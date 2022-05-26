@@ -1,0 +1,1 @@
+add 'box number (box's number) has been clicked' to the console log
