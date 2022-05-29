@@ -4,7 +4,8 @@ import boxes from '../../boxes';
 
 
 export default function Box() {
-  const [on, setOn] = useState(boxes);
+  const [on, setOn] = useState(boxes.on);
+  const [box, setBox] = useState(boxes)
   console.log(boxes)
 
   const styles = {
@@ -17,7 +18,7 @@ export default function Box() {
   }
 
 
-  const boxElement = on.map((item) => (
+  const boxElement = box.map((item) => (
     <div onClick={toggle} style={styles} className="box" key={item.id}></div>
   ));
 
