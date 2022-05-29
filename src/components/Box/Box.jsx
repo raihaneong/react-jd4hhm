@@ -1,9 +1,11 @@
 import React, { useState } from 'react';
 import './Box.css';
+import boxes from '../../boxes';
 
-export default function Box(props) {
-  const [on, setOn] = useState(props);
-  console.log(props)
+
+export default function Box() {
+  const [on, setOn] = useState(boxes);
+  console.log(boxes)
 
   const styles = {
     backgroundColor: on ? 'black' : 'white',
@@ -11,7 +13,7 @@ export default function Box(props) {
 
   function toggle() {
     setOn((prevValue) => !prevValue),
-      console.log(`box ${props.number} has been clicked`);
+      console.log(`box ${boxes.number} has been clicked`);
   }
 
 
@@ -22,7 +24,7 @@ export default function Box(props) {
   return (
     <div>
       {boxElement}
-      <h1>box {props.id} has been flipped</h1>
+      <h1>box {boxes.id} has been flipped</h1>
     </div>
   );
 }
