@@ -10,15 +10,14 @@ export default function App() {
   const boxElement = box.map((item) => (
     <Box key={item.id} on={item.on} number={item.id} />
   ));
-  const boxNumberElement = box.map((item) => (
-    <NumberBox id={boxNumber} />
-  ))
+  
 
   console.log(box)
   return (
     <div>
       <h1>flipping box</h1>
       {boxElement}
+      <h1> box number  has been flipped</h1>
 
     </div>
   );
