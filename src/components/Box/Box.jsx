@@ -4,9 +4,11 @@ import boxes from '../../boxes';
 
 
 export default function Box() {
-  const [on, setOn] = useState(boxes.on);
-  const [box, setBox] = useState(boxes)
-  console.log(boxes)
+
+  const set = boxes.on
+  const fromBoxes = boxes
+  const [on, setOn] = useState(set);
+  const [box, setBox] = useState(fromBoxes)
 
   const styles = {
     backgroundColor: on ? 'black' : 'white',
